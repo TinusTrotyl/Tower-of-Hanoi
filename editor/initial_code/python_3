@@ -1,5 +1,6 @@
 def hanoi(n):
-    # Your code
+    pass # Your code
+    
     
     
 #This code is for self-checking and not necessary for auto-testing
