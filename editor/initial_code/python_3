@@ -1,0 +1,43 @@
+def hanoi(n):
+    # Your code
+    
+    
+#This code is for self-checking and not necessary for auto-testing
+
+if __name__ == '__main__':
+    def check(n):
+        print ('Being tested for ', n, ' disks ... ')
+        ex = 0
+        stacks = [list(range(1, n+1))[::-1], list(), list()]
+        mn = 0
+
+        def move(x, y):
+            nonlocal num
+            stacks[y].append(stacks[x].pop())
+            for st in range(3):
+                if stacks[st] != sorted(stacks[st])[::-1]:
+                    print('At move ', num, ' you placed a bigger disk on a smaller one on stack ', st)
+                    ex = 1
+                    break
+
+        moves = hanoi(n)
+
+        for num in range(1, 2 ** n):
+            try:
+                x, y = next(moves)
+                move(x, y)
+                print('move ', x, y)
+            except:
+                print("You need more moves.")
+                ex = 1
+                break
+        print(stacks, ex)
+        if stacks != [list(), list(), list(range(1, n+1))[::-1]]:
+            ex = 1
+        return ex
+
+    for disks in 3, 1, 2, 4,:
+        if check(disks):
+            break
+    else:
+        print('Done! Go ahead and Check IT')
