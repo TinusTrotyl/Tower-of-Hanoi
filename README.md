@@ -1,3 +1,3 @@
 # Tower-of-Hanoi
 
-Checko mission for a moves generator. 
+A CheciO mission for a Tower-of-Hanoi solving generator. 
