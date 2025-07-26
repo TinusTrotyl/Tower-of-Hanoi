@@ -2,7 +2,7 @@
 <div class="question-answer">
     <div class="question">
         I don’t know how to solve that mission.
-</div>
+    </div>
     <div class="answer">
         <p>There are 3 pile:</p>
         <p>    let's call the one we want to place from the source, </p>
@@ -19,7 +19,7 @@
 
 <div class="question-answer">
     <div class="question">
-        Ok, we may move one disk at a time, how do we move a whole pile then? Sounds a bit confusing.
+        Ok, we may move one disk at a time, but how do we move a whole pile? Sounds a bit confusing.
     </div>
     <div class="answer">
         <p>
@@ -31,20 +31,20 @@
 
 <div class="question-answer">
     <div class="question">
-        Aha, now I see, every time the next whole pile is N - 1 disks, then one disk smaller !
+        Aha, now I see, every time ten the next whole pile is N - 1 disks, one disk smaller !
+        Thus we can solve recursively ?
     </div>
     <div class="answer">
         <p>
            Yes, go on like that till all disks are moved and your goal is reached!
-           And remember this will always be the seqence : . . .
-           1. > N - 1 disks from source to aux,
-           2. > The bottem disk to the target
-           3. > The N - 1 disks from aux to target . . .
+           To move N disks repeat these three steps:
+           1. > yield from move N - 1 disks from source to aux,
+           2. > yield the bottem disk when it moves from source to the target
+           3. > yield from move N - 1 disks from aux to target . . .
          </p>
     </div>
 </div>
-    </div>
-</div>
+
 
 
 
